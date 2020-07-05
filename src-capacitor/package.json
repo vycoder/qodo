@@ -1,0 +1,17 @@
+{
+  "name": "enfocus.app",
+  "version": "1.7.0",
+  "description": "Task Management Application",
+  "author": "yev <josephharveyangeles@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "@capacitor/android": "^2.1.1",
+    "@capacitor/cli": "^2.1.1",
+    "@capacitor/core": "^2.1.1",
+    "capacitor-admob-advanced": "^1.4.1",
+    "capacitor-keep-screen-on": "^1.0.0-alpha.6",
+    "cordova-plugin-network-information": "^2.0.2",
+    "cordova-plugin-purchase": "^10.2.0",
+    "cordova-plugin-sqlite-2": "^1.0.6"
+  }
+}

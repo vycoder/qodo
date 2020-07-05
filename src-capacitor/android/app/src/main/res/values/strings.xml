@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">enFocus</string>
+    <string name="title_activity_main">enFocus</string>
+    <string name="package_name">com.nightowl.enfocus.app</string>
+    <string name="custom_url_scheme">com.nightowl.enfocus.app</string>
+    <string name="billing_key_param">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwbYnf9Vdf//ad4befFPsopdnfrugO3e7R2miJijpel1hxFlNexlOn5oWfbYcMgWmcKJkkLzZ71EysOyWKQ6XN71VkXFonCZEqNxq2djfWNoatGI2c6hNSJ09PoPT0s8kQ/FR7VfN8IGxp7v93MJHX60f+kmt4Aav+7kaDZGmVoYi6ZdU+yqye1pigngHacb/gYVI/54Fuhf8JGnt4mF9ptoskDAJ4Xx6gVY1Ug5/e6jXRepVazQAvPbN7EZSfFkaHjSTW+/YzhopMbkO1wque/sO1/80axKN+1SP8prsA8V8yVAHoj2KYfd/AO/+VoGXIX3QQGAKz5v7tb1fqWtXvwIDAQAB</string>
+</resources>
