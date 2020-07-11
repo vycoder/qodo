@@ -5,6 +5,7 @@ export default {
   mounted () {
     this.$o.pomodoro.registerOn(PomodoroEvents.Update, this.updateRecords)
     this.$root.$on(RootEvents.TaskDeleted, this.updateRecords)
+    this.$root.$on(RootEvents.TaskProgressUpdated, this.updateRecords)
     this.$root.$on(RootEvents.ProjectDeleted, this.updateRecords)
   },
   methods: {
@@ -15,6 +16,7 @@ export default {
   beforeDestroy () {
     this.$o.pomodoro.unRegister(PomodoroEvents.Update, this.updateRecords)
     this.$root.$on(RootEvents.TaskDeleted, this.updateRecords)
+    this.$root.$on(RootEvents.TaskProgressUpdated, this.updateRecords)
     this.$root.$on(RootEvents.ProjectDeleted, this.updateRecords)
   }
 }
