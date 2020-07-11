@@ -67,7 +67,7 @@
                   icon="done"
                   size="xs"/>
                 <q-btn
-                  @click.stop="clearActiveTask"
+                  @click.stop="clearActiveTask()"
                   round unelevated
                   color="red-4"
                   icon="close"

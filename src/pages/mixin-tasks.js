@@ -1,4 +1,5 @@
 import Utils from 'lib/utils'
+import { RootEvents } from 'lib/constants'
 
 import UseTasksDialogs from './mixin-tasks-dialogs'
 
@@ -82,6 +83,7 @@ export default {
     async startTask (task, reset = () => {}) {
       if (this.activeTask) {
         await this.$o.pomodoro.updateActiveTask()
+        this.$root.$emit(RootEvents.TaskProgressUpdated, { ...this.activeTask })
       }
       this.$store.commit('tasks/setActiveTask', task)
       this.$store.commit('pomodoro/clear')
@@ -92,6 +94,7 @@ export default {
     },
     async clearActiveTask (reset = () => {}) {
       await this.$o.pomodoro.updateActiveTask()
+      this.$root.$emit(RootEvents.TaskProgressUpdated, { ...this.activeTask })
       this.$store.commit('tasks/clearActiveTask')
       this.$store.commit('pomodoro/clear')
       reset()
