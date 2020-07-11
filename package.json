@@ -1,6 +1,6 @@
 {
   "name": "enfocus.app",
-  "version": "1.7.6",
+  "version": "1.7.7",
   "description": "Task Management Application",
   "productName": "enFocus",
   "cordovaId": "com.nightowl.enfocus.app",
@@ -9,7 +9,10 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue src lib",
-    "test": "echo \"No test specified\" && exit 0"
+    "test": "echo \"No test specified\" && exit 0",
+    "deploy:linux": "quasar build -m electron -T linux -P always",
+    "deploy:windows": "quasar build -m electron -T win -P always",
+    "deploy:desktop": "yarn deploy:linux && yarn deploy:windows"
   },
   "dependencies": {
     "@capacitor/core": "^2.1.0",
