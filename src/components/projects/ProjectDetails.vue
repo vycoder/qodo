@@ -33,7 +33,7 @@
           rounded color="primary"
           track-color="secondary"/>
       </div>
-      <div class="text-subtitle2 text-grey">{{project.description}}</div>
+      <div class="text-body2 text-grey">{{project.description}}</div>
     </q-card-section>
     <q-card-section>
       <div class="row justify-between items-center">
