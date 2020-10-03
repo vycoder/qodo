@@ -61,9 +61,8 @@ export default async ({ Vue, store }) => {
       name: productName,
       version,
       isPremium: () => {
-        return LocalStorage
-          .getItem(PremiumFlagKey)
-          .current === true
+        return process.env.DEV ||
+          LocalStorage.getItem(PremiumFlagKey).current === true
       }
     },
     iap

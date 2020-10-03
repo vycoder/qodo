@@ -14,7 +14,8 @@
           @click="selectedProject = project"
           :key="project.id"
           :project="project"
-          hide-breakdown
+          hide-breakdown flat
+          bg-color="none"
           class="q-py-md">
           <template v-slot:title="{ project }">
             <div class="text-subtitle2 text-black ellipsis">

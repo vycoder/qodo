@@ -3,8 +3,7 @@
     @click.stop="$emit('click', project)"
     clickable
     v-ripple:accent
-    class="rounded-borders bg-white"
-    :class="{ 'shadow-light': !flat }">
+    :class="`rounded-borders bg-${bgColor} ${flat ? '' : 'shadow-light'}`">
     <q-item-section>
       <q-item-label
         lines="1"
@@ -43,7 +42,8 @@ export default {
   props: {
     project: { type: Object, required: true },
     hideBreakdown: { type: Boolean, default: false },
-    flat: { type: Boolean, default: false }
+    flat: { type: Boolean, default: false },
+    bgColor: { type: String, default: 'white' }
   },
   computed: {
     tasks () {

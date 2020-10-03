@@ -15,7 +15,7 @@
       <task-list
         v-if="tasks.length"
         :tasks="tasks"
-        :flat="false"
+        content-classes="bg-none"
         @click="showTaskDetailsDialog">
         <template v-slot:title="{ task }">
           <div class="text-subtitle2 ellipsis">

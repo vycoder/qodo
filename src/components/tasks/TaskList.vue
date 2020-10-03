@@ -7,6 +7,7 @@
       :value="task"
       :flat="flat"
       :no-side="noSide"
+      :content-classes="contentClasses"
       @click="$emit('click', task)">
       <template v-if="$scopedSlots.title" v-slot:title>
         <slot name="title" :task="{ ...task }" />
@@ -26,7 +27,8 @@ export default {
     tasks: { type: Array, required: true },
     gutterSize: { type: String, default: 'sm' },
     flat: { type: Boolean, default: true },
-    noSide: { type: Boolean, default: false }
+    noSide: { type: Boolean, default: false },
+    contentClasses: { type: String, default: '' }
   }
 }
 </script>
