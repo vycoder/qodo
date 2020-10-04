@@ -72,7 +72,7 @@
       <q-card class="shadow-light q-pa-sm bg-black text-cyan">
         <q-card-section>
           <div class="text-h6">Contact Us</div>
-          <div class="text-subtitle2 text-white">Night Owl Software Studios</div>
+          <div class="text-subtitle2 text-white">Night Owl Studios</div>
         </q-card-section>
         <q-card-section class="q-pt-none">
           Found a bug? Have a killer feature in mind? Or just want to talk about something? Feel free to contact us on the following channels:
