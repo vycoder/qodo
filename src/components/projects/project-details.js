@@ -3,10 +3,10 @@ export default {
     return {
       selectedFilter: 'all',
       filters: [
-        { label: 'All', value: 'all' },
         { label: 'Ongoing', value: 'ongoing' },
+        { label: 'To do', value: 'todo' },
         { label: 'Completed', value: 'completed' },
-        { label: 'To do', value: 'todo' }
+        { label: 'All', value: 'all' }
       ]
     }
   },

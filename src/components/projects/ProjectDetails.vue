@@ -64,15 +64,12 @@
             <div class="row q-gutter-x-xs">
               <q-btn
                 @click.stop="showEditTaskDialog(task)"
-                size="xs"
-                unelevated round
-                icon="edit" color="blue"
-                />
+                unelevated round flat
+                icon="edit" color="blue" size="sm" />
               <q-btn
                 @click.stop="deleteTask(task)"
-                size="xs"
-                unelevated round
-                icon="delete" color="negative" />
+                unelevated round flat
+                icon="delete" color="negative" size="sm" />
             </div>
           </template>
         </task-list>
