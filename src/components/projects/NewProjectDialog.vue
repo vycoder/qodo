@@ -111,7 +111,8 @@ export default {
     showNewTaskDialog () {
       this.$q.dialog({
         component: NewTaskDialog,
-        parent: this
+        parent: this,
+        noProjectInput: true
       }).onOk(this.addTask)
     },
     addTask (task) {

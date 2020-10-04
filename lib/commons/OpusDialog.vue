@@ -29,7 +29,7 @@
       </q-footer>
 
       <q-page-container>
-        <q-page padding>
+        <q-page class="q-px-sm q-pb-none">
           <q-card flat>
             <slot></slot>
           </q-card>

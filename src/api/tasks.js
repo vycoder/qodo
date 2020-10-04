@@ -6,6 +6,7 @@ import { toJSON } from './helpers'
 export const createTask = async ({
   name,
   description,
+  project,
   urgent = false,
   important = false,
   timestamp = Date.now()
@@ -14,6 +15,7 @@ export const createTask = async ({
     id: uid(),
     name,
     description,
+    project,
     urgent,
     important,
     progress: 0,

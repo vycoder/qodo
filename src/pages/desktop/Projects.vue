@@ -8,15 +8,14 @@
       </q-list>
       <q-list
         v-if="projects.length"
-        class="q-px-sm column q-gutter-y-sm">
+        class="q-px-sm column q-gutter-y-xs">
         <project-item
           v-for="project in projects"
           @click="selectedProject = project"
           :key="project.id"
           :project="project"
           hide-breakdown flat
-          bg-color="none"
-          class="q-py-md">
+          bg-color="none">
           <template v-slot:title="{ project }">
             <div class="text-subtitle2 text-black ellipsis">
               {{ project.name }}
