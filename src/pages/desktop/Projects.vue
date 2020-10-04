@@ -59,24 +59,38 @@
         @edit="showEditProjectDialog"
         class="absolute-center"
       />
+      <div class="absolute-bottom-right q-ma-lg z-top" style="width: 50%">
+        <active-task
+          :task="activeTask"
+          @click="showTaskDetailsDialog(activeTask)"
+          @complete="markComplete(activeTask)"
+          @close="clearActiveTask()"
+        />
+      </div>
     </q-page>
   </q-split-layout>
 </template>
 <script>
 import UseProjects from 'pages/mixin-projects'
+import UseTaskActions from 'pages/mixin-task-actions'
 
 import OpusFab from 'lib/commons/OpusFab'
 import OpusImgCaption from 'lib/commons/OpusImgCaption'
 
 import ProjectItem from 'components/projects/ProjectItem'
 import ProjectDetails from 'components/projects/ProjectDetails'
+import ActiveTask from 'components/tasks/ActiveTask'
 
 export default {
   name: 'Projects',
-  mixins: [UseProjects],
+  mixins: [
+    UseProjects,
+    UseTaskActions
+  ],
   components: {
     ProjectItem,
     ProjectDetails,
+    ActiveTask,
     OpusFab,
     OpusImgCaption
   },

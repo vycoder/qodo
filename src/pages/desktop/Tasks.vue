@@ -49,33 +49,12 @@
         <pomodoro />
       </div>
       <div class="absolute-bottom-right q-ma-lg" style="width: 50%">
-        <transition
-          v-if="activeTask"
-          appear mode="out-in"
-          enter-active-class="animated fadeInDown"
-          leave-active-class="animated fadeOutUp">
-          <task-item
-            :value="activeTask"
-            inner-item-classes="q-pa-md q-px-lg"
-            @click="showTaskDetailsDialog(activeTask)">
-            <template v-slot:actions>
-              <div class="row q-gutter-x-xs">
-                <q-btn
-                  @click.stop="markComplete(activeTask)"
-                  round unelevated
-                  color="positive"
-                  icon="done"
-                  size="xs"/>
-                <q-btn
-                  @click.stop="clearActiveTask()"
-                  round unelevated
-                  color="red-4"
-                  icon="close"
-                  size="xs"/>
-              </div>
-            </template>
-          </task-item>
-        </transition>
+        <active-task
+          :task="activeTask"
+          @click="showTaskDetailsDialog(activeTask)"
+          @complete="markComplete(activeTask)"
+          @close="clearActiveTask()"
+        />
       </div>
     </q-page>
   </q-split-layout>
@@ -88,8 +67,8 @@ import OpusBtnDropdownSelect from 'lib/commons/OpusBtnDropdownSelect'
 import OpusImgCaption from 'lib/commons/OpusImgCaption'
 import OpusMoreActionsBtn from 'lib/commons/OpusMoreActionsMenuBtn'
 
-import TaskItem from 'components/tasks/TaskItem'
 import TaskList from 'components/tasks/TaskList'
+import ActiveTask from 'components/tasks/ActiveTask'
 import Pomodoro from 'lib/commons/Pomodoro'
 
 export default {
@@ -97,7 +76,7 @@ export default {
   mixins: [UseTasks],
   components: {
     TaskList,
-    TaskItem,
+    ActiveTask,
     Pomodoro,
     OpusFab,
     OpusImgCaption,
