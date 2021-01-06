@@ -18,7 +18,7 @@
     "@capacitor/core": "^2.1.0",
     "@quasar/extras": "^1.8.1",
     "apexcharts": "^3.19.0",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "capacitor-admob-advanced": "^1.4.0",
     "pouchdb-adapter-cordova-sqlite": "^2.0.7",
     "pouchdb-adapter-idb": "^7.2.1",
